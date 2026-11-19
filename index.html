@@ -3,50 +3,46 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Speed Wheels | Car Rental</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speed Wheels | Mangalagiri Car Rentals</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#f5f6f8;color:#171717}
-header{background:#151515;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header{background:#151515;color:white;padding:17px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .logo{font-size:23px;font-weight:900;color:#ffd400}
-nav a{color:white;text-decoration:none;margin-left:14px;font-size:13px}
-.hero{background:linear-gradient(110deg,#111,#343434);color:white;padding:55px 6% 45px}
+nav a{color:white;text-decoration:none;margin-left:12px;font-size:14px}
+.hero{background:linear-gradient(120deg,#111,#383838);color:white;padding:55px 6%}
 .hero h1{font-size:38px;margin:0 0 12px}
 .hero h1 span{color:#ffd400}
-.hero p{color:#ddd;line-height:1.6}
-.search{background:white;color:#222;border-radius:14px;padding:18px;margin:20px 5%;box-shadow:0 5px 20px #0001}
-.search label{font-size:12px;font-weight:bold;display:block;margin:10px 0 5px}
+.hero p{line-height:1.7;color:#ddd}
+.hero strong{color:#ffd400}
+.search{background:white;border-radius:14px;padding:20px;margin:20px 5%;box-shadow:0 4px 18px #0001}
+label{display:block;font-size:13px;font-weight:bold;margin:12px 0 6px}
 input,select{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:15px;background:white}
-button{background:#ffd400;border:0;border-radius:8px;padding:13px 18px;font-weight:bold;cursor:pointer}
+button,.btn{background:#ffd400;border:0;border-radius:8px;padding:13px 18px;font-weight:bold;cursor:pointer;text-decoration:none;color:#111;display:inline-block;text-align:center}
 .search button{width:100%;margin-top:15px}
 .section{padding:25px 5%}
-.section h2{margin-bottom:8px}
 .muted{color:#777;font-size:14px}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
 .filters button{background:#eee}
 .filters button.active{background:#ffd400}
-.cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 3px 14px #0000000c}
-.car-img{height:155px;background:#ddd;display:flex;align-items:center;justify-content:center;font-size:65px}
-.car-img img{width:100%;height:100%;object-fit:cover}
+.cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:17px}
+.card{background:white;border-radius:13px;overflow:hidden;box-shadow:0 3px 14px #00000012}
+.car-img{width:100%;height:165px;object-fit:cover;background:#ddd}
 .details{padding:15px}
 .details h3{margin:0 0 8px}
-.tags{font-size:12px;color:#666;line-height:2}
+.tags{font-size:13px;color:#666;line-height:1.8}
 .price{font-size:21px;font-weight:bold;margin:12px 0}
 .price small{font-size:12px;color:#777;font-weight:normal}
 .details button{width:100%}
-.info{background:#171717;color:white;padding:30px 6%;margin-top:25px}
-.info h2{color:#ffd400}
-footer{text-align:center;padding:20px;background:#111;color:#ccc;font-size:13px}
-.modal{display:none;position:fixed;inset:0;background:#0009;z-index:5;overflow:auto;padding:20px}
-.modal-box{background:white;border-radius:14px;padding:22px;max-width:450px;margin:30px auto}
-.modal-box h2{margin-top:0}
-.close{float:right;background:#eee;padding:8px 12px}
-.modal-box button.submit{width:100%;margin-top:15px}
-#confirmation{display:none;background:#e9f8eb;padding:14px;border-radius:8px;margin-top:12px}
-.admin{padding:20px;background:#fff;margin:20px 5%;border-radius:12px}
-.admin button{margin:5px}
+.contact{background:#171717;color:white;padding:30px 6%;margin-top:25px}
+.contact h2{color:#ffd400}
+.contact a{margin:6px 6px 6px 0}
+footer{text-align:center;background:#111;color:#ccc;padding:20px;font-size:13px}
+.float{position:fixed;bottom:18px;right:15px;background:#20bd5a;color:white;border-radius:30px;padding:14px 18px;text-decoration:none;font-weight:bold;box-shadow:0 3px 12px #0004;z-index:3}
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:5;overflow:auto;padding:18px}
+.modal-box{background:white;border-radius:14px;padding:22px;max-width:450px;margin:25px auto}
+.close{float:right;background:#eee}
 @media(min-width:700px){
 .search{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;align-items:end}
 .search button{margin:0}
@@ -54,6 +50,7 @@ footer{text-align:center;padding:20px;background:#111;color:#ccc;font-size:13px}
 </style>
 </head>
 <body>
+
 <header>
 <div class="logo">🚗 SPEED WHEELS</div>
 <nav>
@@ -65,7 +62,7 @@ footer{text-align:center;padding:20px;background:#111;color:#ccc;font-size:13px}
 
 <section class="hero" id="home">
 <h1>Your Journey,<br><span>Your Wheels.</span></h1>
-<p>Book your perfect car in Mangalagiri.<br>
+<p>Rent your favourite car in Mangalagiri.<br>
 Self-drive or travel with a professional driver.</p>
 <strong>📍 Mangalagiri, Andhra Pradesh</strong>
 </section>
@@ -86,94 +83,98 @@ Self-drive or travel with a professional driver.</p>
 <div>
 <label>Rental type</label>
 <select id="type">
-<option value="All">All cars</option>
-<option value="Self-drive">Self-drive</option>
-<option value="With driver">With driver</option>
+<option>All</option>
+<option>Self-drive</option>
+<option>With driver</option>
 </select>
 </div>
 <button onclick="searchCars()">Find Cars</button>
 </div>
 
 <section class="section" id="cars">
-<h2>Our Available Cars</h2>
-<p class="muted">Choose a car for your next journey.</p>
+<h2>Our Rental Fleet</h2>
+<p class="muted">Choose your favourite car. Prices shown are sample daily rates.</p>
 <div class="filters">
-<button class="active" onclick="filterCars('All',this)">All</button>
+<button class="active" onclick="filterCars('All',this)">All Cars</button>
 <button onclick="filterCars('Self-drive',this)">Self-drive</button>
-<button onclick="filterCars('With driver',this)">With driver</button>
+<button onclick="filterCars('With driver',this)">With Driver</button>
 </div>
 <div class="cars" id="carList"></div>
 </section>
 
-<section class="info" id="contact">
-<h2>Why Speed Wheels?</h2>
-<p>✓ Easy car booking</p>
-<p>✓ Self-drive and driver options</p>
-<p>✓ Transparent rental prices</p>
-<p>✓ Service in Mangalagiri</p>
-<h3>Contact us</h3>
-<p>Phone: Add your business number</p>
-<p>Location: Mangalagiri, Andhra Pradesh</p>
+<section class="contact" id="contact">
+<h2>Contact Speed Wheels</h2>
+<p>📍 Mangalagiri, Andhra Pradesh</p>
+<p>📞 Business: +91 8639484911</p>
+<p>Book your next journey with us!</p>
+<a class="btn" href="tel:+918639484911">📞 Call Now</a>
+<a class="btn" style="background:#20bd5a;color:white"
+href="https://wa.me/918639484911?text=Hello%20Speed%20Wheels%2C%20I%20want%20to%20rent%20a%20car."
+target="_blank">WhatsApp Us</a>
 </section>
 
-<div class="admin">
-<h3>Admin – Demo Dashboard</h3>
-<p class="muted">View booking requests saved on this device.</p>
-<button onclick="showBookings()">View Bookings</button>
-<div id="adminResults"></div>
-</div>
+<footer>
+© 2026 Speed Wheels | Mangalagiri Car Rental
+</footer>
 
-<footer>© 2026 Speed Wheels. All rights reserved.</footer>
+<a class="float" href="https://wa.me/918639484911?text=Hello%20Speed%20Wheels%2C%20I%20want%20to%20book%20a%20car." target="_blank">WhatsApp</a>
 
 <div class="modal" id="bookingModal">
 <div class="modal-box">
-<button class="close" onclick="closeModal()">✕ Close</button>
+<button class="close" onclick="closeBooking()">✕ Close</button>
 <h2>Book Your Car</h2>
-<div id="selectedCar"></div>
+<div id="carInfo"></div>
 <form id="bookingForm">
 <label>Your name</label>
-<input id="customer" required placeholder="Enter your name">
+<input id="customer" required placeholder="Your full name">
 <label>Mobile number</label>
-<input id="phone" type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+<input id="phone" required type="tel" pattern="[0-9]{10}" placeholder="10-digit number">
 <label>Pickup date</label>
-<input id="bookPickup" type="date" required>
+<input id="bookPickup" required type="date">
 <label>Return date</label>
-<input id="bookDrop" type="date" required>
+<input id="bookDrop" required type="date">
 <label>Pickup location</label>
 <input id="bookLocation" value="Mangalagiri" required>
-<button class="submit" type="submit">Send Booking Request</button>
+<button style="width:100%;margin-top:16px">Continue to WhatsApp Booking</button>
 </form>
-<div id="confirmation"></div>
 </div>
 </div>
 
 <script>
 const cars=[
-{id:1,name:"Swift Dzire",type:"With driver",price:1800,emoji:"🚘",desc:"Sedan • 4 seats"},
-{id:2,name:"Maruti Swift",type:"Self-drive",price:1500,emoji:"🚗",desc:"Hatchback • 4 seats"},
-{id:3,name:"Hyundai Creta",type:"Self-drive",price:2800,emoji:"🚙",desc:"SUV • 5 seats"},
-{id:4,name:"Toyota Innova",type:"With driver",price:3500,emoji:"🚐",desc:"MUV • 7 seats"},
-{id:5,name:"Mahindra Thar",type:"Self-drive",price:4000,emoji:"🚙",desc:"SUV • 4 seats"},
-{id:6,name:"Kia Carens",type:"With driver",price:3200,emoji:"🚐",desc:"MUV • 6 seats"}
+{name:"Maruti Swift Dzire",type:"With driver",price:1800,desc:"Sedan • 4 seats",img:"https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=700"},
+{name:"Maruti Swift",type:"Self-drive",price:1500,desc:"Hatchback • 4 seats",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700"},
+{name:"Hyundai Creta",type:"Self-drive",price:2800,desc:"SUV • 5 seats",img:"https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=700"},
+{name:"Toyota Innova Crysta",type:"With driver",price:3500,desc:"MUV • 7 seats",img:"https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=700"},
+{name:"Mahindra Thar",type:"Self-drive",price:4000,desc:"SUV • 4 seats",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700"},
+{name:"Kia Seltos",type:"Self-drive",price:2800,desc:"SUV • 5 seats",img:"https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=700"},
+{name:"Toyota Fortuner",type:"With driver",price:5500,desc:"Luxury SUV • 7 seats",img:"https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=700"},
+{name:"Maruti Ertiga",type:"With driver",price:2600,desc:"MUV • 7 seats",img:"https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=700"},
+{name:"Maruti Baleno",type:"Self-drive",price:1600,desc:"Hatchback • 5 seats",img:"https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=700"},
+{name:"Honda City",type:"Self-drive",price:2500,desc:"Sedan • 5 seats",img:"https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=700"},
+{name:"Kia Carens",type:"With driver",price:3200,desc:"MUV • 6 seats",img:"https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=700"},
+{name:"Hyundai Venue",type:"Self-drive",price:2200,desc:"Compact SUV • 5 seats",img:"https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=700"}
 ];
 
 let currentFilter="All";
-let selected=null;
+let selectedCar=null;
 
 function renderCars(){
 const list=document.getElementById("carList");
 list.innerHTML="";
-cars.filter(c=>currentFilter==="All"||c.type===currentFilter)
-.forEach(c=>{
-list.innerHTML+=`
-<div class="card">
-<div class="car-img">${c.emoji}</div>
+cars.filter(c=>currentFilter==="All"||c.type===currentFilter).forEach(c=>{
+const card=document.createElement("div");
+card.className="card";
+card.innerHTML=`
+<img class="car-img" src="${c.img}" alt="${c.name}" loading="lazy">
 <div class="details">
 <h3>${c.name}</h3>
 <div class="tags">${c.desc}<br>${c.type}</div>
-<div class="price">₹${c.price.toLocaleString("en-IN")} <small>/ day (sample price)</small></div>
-<button onclick="openBooking(${c.id})">Book Now</button>
-</div></div>`;
+<div class="price">₹${c.price.toLocaleString("en-IN")} <small>/ day*</small></div>
+<button>Book Now</button>
+</div>`;
+card.querySelector("button").onclick=()=>openBooking(c);
+list.appendChild(card);
 });
 }
 
@@ -187,73 +188,44 @@ renderCars();
 function searchCars(){
 currentFilter=document.getElementById("type").value;
 document.querySelectorAll(".filters button").forEach(b=>{
-b.classList.toggle("active",b.textContent===currentFilter|| (currentFilter==="All"&&b.textContent==="All"));
+b.classList.toggle("active",b.textContent===(currentFilter==="All"?"All Cars":currentFilter));
 });
 renderCars();
 document.getElementById("cars").scrollIntoView({behavior:"smooth"});
 }
 
-function openBooking(id){
-selected=cars.find(c=>c.id===id);
-document.getElementById("selectedCar").innerHTML=
-`<h3>${selected.name}</h3><p>${selected.type} – ₹${selected.price} per day (sample price)</p>`;
+function openBooking(car){
+selectedCar=car;
+document.getElementById("carInfo").innerHTML=
+`<h3>${car.name}</h3><p>${car.type} | ₹${car.price} per day (sample price)</p>`;
 document.getElementById("bookPickup").value=document.getElementById("pickup").value;
 document.getElementById("bookDrop").value=document.getElementById("drop").value;
 document.getElementById("bookLocation").value=document.getElementById("location").value;
-document.getElementById("confirmation").style.display="none";
-document.getElementById("bookingForm").style.display="block";
 document.getElementById("bookingModal").style.display="block";
 }
 
-function closeModal(){
+function closeBooking(){
 document.getElementById("bookingModal").style.display="none";
 }
 
 document.getElementById("bookingForm").addEventListener("submit",function(e){
 e.preventDefault();
-const start=new Date(document.getElementById("bookPickup").value);
-const end=new Date(document.getElementById("bookDrop").value);
-if(isNaN(start)||isNaN(end)||end<=start){
-alert("Please select a valid return date after pickup date.");
+const name=document.getElementById("customer").value.trim();
+const phone=document.getElementById("phone").value.trim();
+const pickup=document.getElementById("bookPickup").value;
+const drop=document.getElementById("bookDrop").value;
+const location=document.getElementById("bookLocation").value.trim();
+const start=new Date(pickup);
+const end=new Date(drop);
+if(!pickup||!drop||end<=start){
+alert("Return date must be after pickup date.");
 return;
 }
 const days=Math.ceil((end-start)/86400000);
-const booking={
-id:Date.now(),
-car:selected.name,
-type:selected.type,
-name:document.getElementById("customer").value,
-phone:document.getElementById("phone").value,
-pickup:document.getElementById("bookPickup").value,
-drop:document.getElementById("bookDrop").value,
-location:document.getElementById("bookLocation").value,
-total:days*selected.price,
-status:"Request received"
-};
-const bookings=JSON.parse(localStorage.getItem("speedBookings")||"[]");
-bookings.push(booking);
-localStorage.setItem("speedBookings",JSON.stringify(bookings));
-document.getElementById("bookingForm").style.display="none";
-const msg=document.getElementById("confirmation");
-msg.style.display="block";
-msg.innerHTML=`<h3>✓ Request saved!</h3>
-<p>Car: ${booking.car}</p>
-<p>Duration: ${days} days</p>
-<p>Estimated total: ₹${booking.total}</p>
-<p>Your request is saved on this device. The rental team must contact you to confirm.</p>
-<button onclick="closeModal()">Close</button>`;
+const total=days*selectedCar.price;
+const message=`Hello Speed Wheels! I want to book a car.%0ACar: ${encodeURIComponent(selectedCar.name)}%0ARental: ${encodeURIComponent(selectedCar.type)}%0ACustomer: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0APickup: ${encodeURIComponent(pickup)}%0AReturn: ${encodeURIComponent(drop)}%0ALocation: ${encodeURIComponent(location)}%0ADays: ${days}%0AEstimated total: Rs. ${total}%0APlease confirm availability and final price.`;
+window.open("https://wa.me/918639484911?text="+message,"_blank");
 });
-
-function showBookings(){
-const bookings=JSON.parse(localStorage.getItem("speedBookings")||"[]");
-const output=document.getElementById("adminResults");
-if(!bookings.length){output.innerHTML="<p>No bookings yet.</p>";return;}
-output.innerHTML=bookings.map(b=>
-`<hr><p><b>${b.car}</b> – ${b.name}</p>
-<p>${b.phone} | ${b.pickup} to ${b.drop}</p>
-<p>₹${b.total} | ${b.status}</p>`).join("");
-}
-
 renderCars();
 </script>
 </body>
